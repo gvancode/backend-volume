@@ -51,5 +51,5 @@ spec:
               mountPath: /tmp/logs
       volumes:
         - name: logs-volume
-        persistentVolumeClaim:
-          claimName: data-logs
+          persistentVolumeClaim:
+            claimName: data-logs
