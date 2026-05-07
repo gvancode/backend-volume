@@ -46,11 +46,10 @@ spec:
             {{- toYaml .Values.readinessProbe | nindent 12 }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          {{- with .Values.volumeMounts }}
           volumeMounts:
             - name: logs-volume
-            mountPath: /tmp/logs
+              mountPath: /tmp/logs
       volumes:
-        -name: logs-volume
+        - name: logs-volume
         persistentVolumeClaim:
           claimName: data-logs
